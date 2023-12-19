@@ -1,68 +1,51 @@
-def eligible():
-    print("You can join this branch.")
-
-def not_eligible():
-    print("You are not eligible for this branch.")
-
-branches = ["Football", "Swimming", "Handball", "Basketball", "Gymnastics"]
-girls = {"Nihal", "Ipek", "Ozden"}
-boys = {"Enes", "Ufuk", "Ulas", "Burak", "Caner"}
-
-name_input = input("Enter your name: ").lower()
-age_input = int(input("Enter your age: "))
-index = 0
-
-for branch in branches:
-    index += 1
-    print(index, branch)
-
-branch_input = input("Enter the branch you want to choose: ").lower()
-
-if name_input in girls:
-    if branch_input == "football" or branch_input == "1":
-        certification = input("Do you have a football certificate? [y/n]: ").lower()
-        if certification == "y":
-            eligible()
-        else:
-            not_eligible()
-
-    elif branch_input == "swimming" or branch_input == "2" and age_input <= 6:
-        eligible()
-
-    elif branch_input == "handball" or branch_input == "3" and age_input <= 8:
-        eligible()
-
-    elif branch_input == "basketball" or branch_input == "4" and 20 <= age_input <= 30:
-        eligible()
-
-    elif branch_input == "gymnastics" or branch_input == "5":
-        not_eligible()
-
+def uygun():
+  print("bu branşa yazılabilirsiniz")
+def degil():
+  print("bu branşa uygun değilsiniz")
+brnslr=["Futbol","Yüzme","Handball","Basketbol","Jimnastik"]
+k={"nihal","ipek","özden"}
+e={"enes","ufuk","ulaş","burak","caner"}
+isim_gir= input("adınızı girin:").lower()
+yas_gir= int(input("yaşınızı girin:"))
+ss=0
+for branslar in brnslr:
+  ss=ss+1
+  print(ss,branslar)
+brans_gir= input("seçmek isteiğiniz branşı yazınız:").lower()
+if isim_gir in k:
+  if brans_gir == "futbol" or brans_gir== "1":
+    kontrol= input("futbol sertifikanız var mı [e/h] : ").lower()
+    if kontrol == "e":
+      print("bu branşa yazılabilirsiniz")
     else:
-        not_eligible()
+      print("bu branşa uygun değilsiniz")
 
-elif name_input in boys:
-    if branch_input == "football" or branch_input == "1":
-        certification = input("Do you have a football certificate? [y/n]: ").lower()
-        if certification == "y":
-            eligible()
-        else:
-            not_eligible()
+  elif brans_gir == "yüzme" or brans_gir == "1" and yas_gir <=6:uygun()
 
-    elif branch_input == "swimming" or branch_input == "2" and age_input <= 6:
-        eligible()
+  elif brans_gir == "handball" or brans_gir == "3" and yas_gir <=8:uygun()
 
-    elif branch_input == "handball" or branch_input == "3" and age_input <= 8:
-        eligible()
+  elif brans_gir == "basketbol" or brans_gir == "4" and 20 <= yas_gir <= 30 :uygun()
 
-    elif branch_input == "basketball" or branch_input == "4" and 20 <= age_input <= 30:
-        eligible()
+  elif brans_gir == "jimnastik" or brans_gir == "5":degil()
 
-    elif branch_input == "gymnastics" or branch_input == "5":
-        not_eligible()
+  else:degil()
 
-    else:
-        not_eligible()
+elif isim_gir in e:
+  if brans_gir == "futbol" or brans_gir== "1":
+    kontrol= input("futbol sertifikanız var mı [e/h] :").lower()
+    if kontrol == "e":uygun()
+    else:degil()
+
+  elif brans_gir == "yüzme" or brans_gir == "2" and yas_gir <=6:uygun()
+
+  elif brans_gir == "handball" or brans_gir == "3" and yas_gir <=8:uygun()
+
+  elif brans_gir == "basketbol" or brans_gir == "4" and 20 <= yas_gir <= 30 :uygun()
+
+  elif brans_gir == "jimnastik" or brans_gir == "5":degil()
+
+  else:degil()
 
 else:
-    print("Enter a valid name!")
+  print("Geçerli bir isim girin!")
+
