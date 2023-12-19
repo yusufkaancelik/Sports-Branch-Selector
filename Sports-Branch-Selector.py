@@ -32,4 +32,3 @@ brans_gir= input("seçmek isteiğiniz branşı yazınız:").lower()
 
 else:
   print("Geçerli bir isim girin!")
-
